@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh 'npm install'
         input(message: 'Go ahead', id: 'some1', ok: 'Yes')
-        timeout(time: 30, unit: 'SECONDS') {
+        timeout(time: 1, unit: 'HOURS') {
           input(message: 'how are you?', ok: 'Yes')
         }
 
