@@ -11,6 +11,10 @@ pipeline {
       steps {
         sh 'npm install'
         input(message: 'Go ahead', id: 'some1', ok: 'Yes')
+        timeout(time: 30) {
+          input(message: 'how are you?', ok: 'Yes')
+        }
+
       }
     }
     stage('Test') {
