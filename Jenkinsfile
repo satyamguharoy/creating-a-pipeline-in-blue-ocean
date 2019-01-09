@@ -10,6 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm install'
+        input(message: 'Go ahead', id: 'some1', ok: 'Yes')
       }
     }
     stage('Test') {
